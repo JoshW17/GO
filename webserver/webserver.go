@@ -18,6 +18,8 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Println("Hello There! - Obi Wan")
 
+	http.ServeFile(w, r, "./static/hello.html")
+
 }
 
 func main() {
