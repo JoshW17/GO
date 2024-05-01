@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #F8F8F8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #EFEFEF;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #666;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666;
+            font-weight: bold;
+        }
+
+        section.main-content {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .widget {
+            background-color: #DDD;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 45%;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #EFEFEF;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+
+    <section class="main-content">
+        <div class="widget">
+            <h2>Widget 1</h2>
+            <p>{{ .Body }}</p>
+        </div>
+        <div class="widget">
+            <h2>Widget 2</h2>
+            <p>{{ .Body }}</p>
+        </div>
+        <!-- Add more widgets as needed -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+</body>
+</html>
